@@ -7,6 +7,7 @@ $('#doLogin').on('click', function() {
         dataType: 'json',
         success: function (response) {
             lists = JSON.parse(response.data);
+            alert('here');
         },
     })
 });
