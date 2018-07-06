@@ -9,7 +9,7 @@ $('#doLogin').on('click', function() {
     }).done(function (response) {
         if (response.result === 'success') {
             localStorage.setItem('loggedIn', true);
-            localStorage.setItem('lists', JSON.stringify(response.data));
+            localStorage.setItem('forms', JSON.stringify(response.data));
             document.location.href = 'dashboard.html';
         } else {
             $('.js-login-response').html('Something went wrong').show();

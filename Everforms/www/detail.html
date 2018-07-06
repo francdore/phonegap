@@ -42,33 +42,24 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="row bg-white p-1">
-        <div class="col-md-12">
-            <img src="img/everlytic.png" class="img-fluid" alt="Everlytic">
+    <div class="container d-flex justify-content-center h-100">
+        <div class="row justify-content-center align-self-center w-100">
+            <div class="col-md-12 text-center">
+                <img src="img/everlytic.png" class="img-fluid mx-auto mb-2" alt="Everlytic">
+                <div id="forms"></div>
+                <button class="btn btn-success btn-block" id="doLogin">Login</button>
+            </div>
         </div>
     </div>
-    <div class="row mt-3">
-        <div class="col-md-12">
-            <h1>Dashboard</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="list-group list-group-flush js-forms-list"></ul>
-        </div>
-    </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/dashboard.js"></script>
-<script type="text/javascript">
-    document.addEventListener('load', function(){ alert("hello") });
-    app.initialize();
-</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+
+
+        app.initialize();
+    </script>
 </body>
 </html>
