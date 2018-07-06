@@ -9,7 +9,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        $.each(formList.data, function(index, element) {
+        $.each(formList, function(index, element) {
             $('.js-forms-list').append('<li class="list-group-item">' + element.form_name + '</li>');
         });
     },
