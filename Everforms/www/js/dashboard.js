@@ -9,6 +9,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        var formList = JSON.parse(localStorage.getItem('lists'));
+        console.log(formList);
         $.each(formList, function(index, element) {
             $('.js-forms-list').append('<li class="list-group-item">' + element.form_name + '</li>');
         });
