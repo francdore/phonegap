@@ -7,6 +7,7 @@ $('#doLogin').on('click', function() {
         dataType: 'json',
         success: function (response) {
             formList = response.data;
+            document.location.href = 'dashboard.html'
         },
     })
 });
