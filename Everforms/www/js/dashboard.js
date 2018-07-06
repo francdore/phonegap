@@ -9,23 +9,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        var formList = {
-            "result": "success",
-            "data": [{
-                "form_name": "test double opt in",
-                "form_description": "",
-                "form_embed_url": "http:\/\/qa.everlytic.net\/public\/forms\/get\/zIa80rTsnKBqcezb\/MmM2NGQxOWI1ZTlmOTIxYjZlMWE2NzdkOGIyNTJjMTQxMzU2YmM0OQ=="
-            }, {
-                "form_name": "test sub success",
-                "form_description": "",
-                "form_embed_url": "http:\/\/qa.everlytic.net\/public\/forms\/get\/thIh8gz8JAYNAOpV\/ZWRmM2Q4ZTI5MGQyN2Q5M2IwMTE0ZTg3MDQzZThjNDQwNDBmY2Y0Mg=="
-            }, {
-                "form_name": "Test confirmation",
-                "form_description": "",
-                "form_embed_url": "http:\/\/qa.everlytic.net\/public\/forms\/get\/YEZbKRceC8sIx4hi\/OTgzNTE4YTUwOWYwYTI2OWE2NDBmYTMwNDE0NjVmYTEyODA2YmEzMQ=="
-            }]
-        };
-
         $.each(formList.data, function(index, element) {
             $('.js-forms-list').append('<li class="list-group-item">' + element.form_name + '</li>');
         });
