@@ -26,8 +26,8 @@ var app = {
             }]
         };
 
-        $.each(data.dates, function(index, element) {
-            alert(element.timeStamp);
+        $.each(formList.data, function(index, element) {
+            $('.js-forms-list').append('<li class="list-group-item">' + element.form_name + '</li>');
         });
     },
     // deviceready Event Handler
