@@ -34,18 +34,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        $('#doLogin').on('click', function() {
-            $.ajax({
-                method: 'get',
-                url: 'http://qa.everlytic.net/api/3.0/forms',
-                username: $('#username').val(),
-                password: $('#apikey').val(),
-                dataType: 'json',
-                success: function (response) {
-                    lists = JSON.parse(response.data);
-                },
-            })
-        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
