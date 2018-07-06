@@ -6,8 +6,7 @@ $('#doLogin').on('click', function() {
         password: $('#apikey').val(),
         dataType: 'json',
         success: function (response) {
-            lists = JSON.parse(response.data);
-            alert('here');
+            formList = response.data;
         },
     })
 });
