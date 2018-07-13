@@ -13,13 +13,13 @@ var app = {
         $.each(formList, function(index, element) {
             getIdFromForm(element.form_embed_url);
             $('.js-forms-list').append('<li class="list-group-item text-capitalize">' + element.form_name + '<button class="btn btn-success btn-sm float-right"><i class="fa fa-sync-alt"></i></button>' + '</li>');
-        }
+        });
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function () {
+    onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
