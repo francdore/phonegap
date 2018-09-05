@@ -20,6 +20,7 @@ $('#doLogin').on('click', function() {
         }
     }).fail(function(jqXHR, status) {
         $('#doLogin').html('Login').removeClass('disable').removeAttr('disabled');
+        $('.js-login-response').html(jqXHR.statusText);
         if (jqXHR.statusText === "Unauthorized") {
             $('.js-login-response').html('Your username or password is wrong').show();
         }
