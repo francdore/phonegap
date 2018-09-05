@@ -9,7 +9,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        var formList = JSON.parse(localStorage.getItem('lists'));
+        var formList = JSON.parse(localStorage.getItem('forms'));
         $.each(formList, function(index, element) {
             getIdFromForm(element.form_embed_url);
             $('.js-forms-list').append('<li class="list-group-item text-capitalize">' + element.form_name + '<button class="btn btn-success btn-sm float-right"><i class="fa fa-sync-alt"></i></button>' + '</li>');
