@@ -1,18 +1,18 @@
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         this.bindEvents();
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
+    bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         var formList = JSON.parse(localStorage.getItem('lists'));
-        console.log(formList);
         $.each(formList, function(index, element) {
-            $('.js-forms-list').append('<li class="list-group-item">' + element.form_name + '</li>');
+            getIdFromForm(element.form_embed_url);
+            $('.js-forms-list').append('<li class="list-group-item text-capitalize">' + element.form_name + '<button class="btn btn-success btn-sm float-right"><i class="fa fa-sync-alt"></i></button>' + '</li>');
         });
     },
     // deviceready Event Handler
@@ -23,7 +23,7 @@ var app = {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -33,4 +33,14 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+};
+
+getIdFromForm = function (url) {
+    $.ajax({
+        type: "GET",
+        url: url,
+        timeout: 60
+    }).done(function (response) {
+        console.log(response)
+    });
 };
