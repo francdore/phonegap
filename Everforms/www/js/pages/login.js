@@ -10,6 +10,7 @@ $('#doLogin').on('click', function() {
             $('#doLogin').html('<i class="fa fa-gear fa-spin"></i> Login').addClass('disable').attr('disabled', true);
         },
     }).done(function (response) {
+        $('.js-login-response').html(JSON.stringify(response));
         if (response.result === 'success') {
             localStorage.setItem('loggedIn', true);
             localStorage.setItem('forms', JSON.stringify(response.data));
