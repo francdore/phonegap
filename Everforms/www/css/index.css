@@ -5,3 +5,7 @@ html {
 body {
     height: 100%
 }
+
+.margin-left-5 {
+    margin-left: 5px;
+}

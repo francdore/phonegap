@@ -12,7 +12,12 @@ var app = {
         var formList = JSON.parse(localStorage.getItem('forms'));
         $.each(formList, function(index, element) {
             getIdFromForm(element.form_embed_url);
-            $('.js-forms-list').append('<li class="list-group-item text-capitalize">' + element.form_name + '<button class="btn btn-success btn-sm float-right"><i class="fa fa-sync-alt"></i></button>' + '</li>');
+            $('.js-forms-list').append(
+                '<li class="list-group-item text-capitalize">' + element.form_name +
+                '<button class="btn btn-success btn-sm margin-left-5 float-right js-sync-form"><i class="fa fa-sync-alt"></i></button>' +
+                    '<button class="btn btn-info btn-sm float-right js-view-form"><i class="fa fa-search text-white"></i></button>' +
+                '</li>'
+            );
         });
     },
     // deviceready Event Handler
